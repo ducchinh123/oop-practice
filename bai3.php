@@ -10,36 +10,72 @@ abstract class Shape
 }
 
 
-class Triangle extends Shape{
+class Triangle extends Shape
+{
     private $bottom_edge;
     private $height;
 
-    public function __construct($a, $b) {
+    public function __construct($a, $b)
+    {
         $this->bottom_edge = $a;
         $this->height = $b;
     }
 
-    public function calculateArea() {
-        return ($this->bottom_edge * $this->height)/2;
+    public function calculateArea()
+    {
+        return ($this->bottom_edge * $this->height) / 2;
     }
 }
 
-
-class Rectangle extends Shape{
+class Rectangle extends Shape
+{
 
     private $w;
     private $h;
 
-    public function __construct($a, $b) {
+    public function __construct($a, $b)
+    {
         $this->w = $a;
         $this->h = $b;
     }
 
-    public function calculateArea() {
-        return $this->w*$this->h;
+    public function calculateArea()
+    {
+        return $this->w * $this->h;
     }
 }
 
+
+abstract class Animal {
+    abstract public function makeSound();
+}
+
+abstract class Mammal extends Animal {
+    public function giveBirth() {
+        echo "Giving birth...\n";
+    }
+}
+
+class Dog extends Mammal {
+    public function makeSound() {
+        echo "Woof!\n";
+    }
+}
+
+class Cat extends Mammal {
+    public function makeSound() {
+        echo "Meow!\n";
+    }
+}
+
+// Sử dụng
+$dog = new Dog();
+$dog->makeSound(); // Output: Woof!
+$dog->giveBirth(); // Output: Giving birth...
+
+$cat = new Cat();
+$cat->makeSound(); // Output: Meow!
+$cat->giveBirth(); // Output: Giving birth...
 
 /*
 

@@ -17,10 +17,16 @@ class Rectangle {
         echo "Chu vi hình chữ nhật sẽ là: (".$this->length." + ".$this->width.") * 2 = ".($this->length + $this->width)*2;
     }
 
+    public function rectangle_acreage() {
+        echo "Với chiều dài =".$this->length."</br>";
+        echo "và chiều rộng =".$this->width."</br>";
+        echo "Diện tích hình chữ nhật sẽ là: ".$this->length." x ".$this->width." = ".($this->length * $this->width);
+    }
+
 }
 
 $cn1 = new Rectangle;
 $cn1->length = 3;
 $cn1->width = 2;
 $cn1->rectangle_perimeter();
-?>
+$cn1->rectangle_acreage();

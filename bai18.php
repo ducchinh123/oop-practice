@@ -30,12 +30,12 @@ class Logger {
 
 }
 
-$logger = Logger::getInstance();
-$logger->log("Message 1");
-$logger->log("Message 2");
-$logger->log("Message 3");
-$listLogs = $logger->getLogs();
+// $logger = Logger::getInstance();
+// $logger->log("Message 1");
+// $logger->log("Message 2");
+// $logger->log("Message 3");
+// $listLogs = $logger->getLogs();
 
-foreach($listLogs as $log) {
-    echo $log."</br>";
-}
+// foreach($listLogs as $log) {
+//     echo $log."</br>";
+// }
